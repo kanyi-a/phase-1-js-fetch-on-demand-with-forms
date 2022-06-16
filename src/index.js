@@ -11,11 +11,11 @@ inputForm.addEventListener('submit', (event) => {
     event.preventDefault();
     //console.log(event);
     const input = document.querySelector('input#searchByID');
-  console.log(input.value);
+    //console.log(input.value);
 
   //fetching data 
 
-    fetch('http://localhost:3000/movies')
+    fetch('http://localhost:3000/movies/${input.value}')
 //getting response
     .then(response => response.json())
     //console logging the data
